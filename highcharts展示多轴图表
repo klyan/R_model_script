@@ -1,0 +1,183 @@
+a <- Highcharts$new()
+a$chart(type = "column")
+a$title(text = "算法 exp1 毛利")
+
+data2 <- data1[data1[,"algoversion"]=='exp1',]
+index <- order(data1[data1[,"algoversion"]=='exp1',"report_date"])
+data2 <- data2[index,]
+
+a$xAxis(categories = data2[,"report_date"])
+
+a$yAxis(list(list(title = list(text = '访购率'))
+             , list(title = list(text = '千访问UV毛利'), opposite = TRUE)
+             )
+        )
+a$series(name = '访购率', type = 'spline', color = '#4572A7',
+                data = data2[,"访购率"])
+
+a$series(name = '千访问UV毛利', type = 'spline', color = '#89A54E',
+				data = data2[,"千访问UV毛利"],
+         yAxis = 1)
+
+a
+
+-----------------
+
+a <- Highcharts$new()
+a$chart(type = "column")
+a$title(text = "算法 exp2 毛利")
+
+data2 <- data1[data1[,"algoversion"]=='exp2',]
+index <- order(data1[data1[,"algoversion"]=='exp2',"report_date"])
+data2 <- data2[index,]
+
+a$xAxis(categories = data2[,"report_date"])
+
+a$yAxis(list(list(title = list(text = '访购率'))
+             , list(title = list(text = '千访问UV毛利'), opposite = TRUE)
+             )
+        )
+a$series(name = '访购率', type = 'spline', color = '#4572A7',
+                data = data2[,"访购率"])
+
+a$series(name = '千访问UV毛利', type = 'spline', color = '#89A54E',
+				data = data2[,"千访问UV毛利"],
+         yAxis = 1)
+
+a
+
+
+-----------------
+
+a <- Highcharts$new()
+a$chart(type = "column")
+a$title(text = "算法 exp3 毛利")
+
+data2 <- data1[data1[,"algoversion"]=='exp3',]
+index <- order(data1[data1[,"algoversion"]=='exp3',"report_date"])
+data2 <- data2[index,]
+
+a$xAxis(categories = data2[,"report_date"])
+
+a$yAxis(list(list(title = list(text = '访购率'))
+             , list(title = list(text = '千访问UV毛利'), opposite = TRUE)
+             )
+        )
+a$series(name = '访购率', type = 'spline', color = '#4572A7',
+                data = data2[,"访购率"])
+
+a$series(name = '千访问UV毛利', type = 'spline', color = '#89A54E',
+				data = data2[,"千访问UV毛利"],
+         yAxis = 1)
+
+a
+
+-----------------
+
+a <- Highcharts$new()
+a$chart(type = "column")
+a$title(text = "算法 base 毛利")
+
+data2 <- data1[data1[,"algoversion"]=='base',]
+index <- order(data1[data1[,"algoversion"]=='base',"report_date"])
+data2 <- data2[index,]
+
+a$xAxis(categories = data2[,"report_date"])
+
+a$yAxis(list(list(title = list(text = '访购率'))
+             , list(title = list(text = '千访问UV毛利'), opposite = TRUE)
+             )
+        )
+a$series(name = '访购率', type = 'spline', color = '#4572A7',
+                data = data2[,"访购率"])
+
+a$series(name = '千访问UV毛利', type = 'spline', color = '#89A54E',
+				data = data2[,"千访问UV毛利"],
+         yAxis = 1)
+
+a
+
+-----------------
+
+a <- Highcharts$new()
+a$chart(type = "column")
+a$title(text = "算法 optimal 毛利")
+
+data2 <- data1[data1[,"algoversion"]=='optimal',]
+index <- order(data1[data1[,"algoversion"]=='optimal',"report_date"])
+data2 <- data2[index,]
+
+a$xAxis(categories = data2[,"report_date"])
+
+a$yAxis(list(list(title = list(text = '访购率'))
+             , list(title = list(text = '千访问UV毛利'), opposite = TRUE)
+             )
+        )
+a$series(name = '访购率', type = 'spline', color = '#4572A7',
+                data = data2[,"访购率"])
+
+a$series(name = '千访问UV毛利', type = 'spline', color = '#89A54E',
+				data = data2[,"千访问UV毛利"],
+         yAxis = 1)
+
+a
+
+
+
+
+
+-------
+
+
+
+
+
+a <- Highcharts$new()
+a$chart(type = "column")
+a$title(text = "一级美食访购率、千访问UV毛利以及总毛利走势")
+
+index <- order(total[,"report_date"])
+total <- total[index,]
+
+a$xAxis(categories = total[,"report_date"])
+
+a$yAxis(list(list(title = list(text = '访购率（%）'))
+             , list(title = list(text = '千访问UV毛利（￥）'), opposite = TRUE)
+             , list(title = list(text = '总毛利（￥）'), opposite = TRUE)
+             )
+        )
+a$series(name = '访购率（%）', type = 'spline', color = '#4572A7',
+                data = total[,"访购率"])
+
+a$series(name = '千访问UV毛利（元）', type = 'spline', color = '#89A54E',
+				data = total[,"千访问UV毛利"],
+         yAxis = 1)
+
+
+a$series(name = '总毛利（元）', type = 'spline', color = '#AA4643',
+				data = total[,"总毛利"],
+         yAxis = 2)
+
+a
+
+
+
+
+------
+
+
+a <- Highcharts$new()
+a$chart(type = "column")
+a$title(text = "一级美食访购率、千访问UV毛利以及总毛利走势")
+
+index <- order(total[,"report_date"])
+total <- total[index,]
+
+a$xAxis(categories = total[,"report_date"])
+
+a$yAxis(list(list(title = list(text = 'benifit'))))
+
+a$series(name = 'benefit_day', type = 'spline', color = '#89A54E',
+                data = total[,"total"])
+
+a
